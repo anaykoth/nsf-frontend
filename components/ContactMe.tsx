@@ -5,39 +5,39 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 interface IInputs {
     name: string;
     email: string;
-    subject: string;
-    message: string;
+    occupation: string;
+    feedback: string;
 }
 
 const ContactMe: FC = () => {
     const { register, handleSubmit } = useForm<IInputs>();
 
     const onSubmit: SubmitHandler<IInputs> = (formData: any) => {
-        window.location.href = `mailto:amitparmar901@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+        window.location.href = `mailto:amitparmar901@gmail.com?subject=${formData.occupation}&body=Hi, my name is ${formData.name}. ${formData.feedback} (${formData.email})`;
     };
 
     return (
         <div className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-black text-2xl">
                 Contact
             </h3>
             <div className="flex flex-col space-y-10">
-                <h4 className="text-4xl font-semibold text-center">
-                    I have got just what you need.{" "}
-                    <span className="decoration-[#f7ab0a]/50 underline">Lets Talk.</span>
+                <h4 className="text-4xl text-black font-semibold text-center">
+                    So... what do you think?{" "}
+                    <span className="decoration-[#f7ab0a]/50 underline">Let us know</span> down below!
                 </h4>
                 <div className="space-y-10">
-                    <div className="flex items-center space-x-5 justify-center">
+                    {/*<div className="flex items-center space-x-5 justify-center">
                         <PhoneIcon className="text-[#f7ab0a] h-7	w-7	animate-pulse" />
                         <p className="text-2xl">+91919199919191</p>
                     </div>
                     <div className="flex items-center space-x-5 justify-center">
                         <EnvelopeIcon className="text-[#f7ab0a] h-7	w-7	animate-pulse" />
                         <p className="text-2xl">amitparmar901@gmail.com</p>
-                    </div>
+                    </div>*/}
                     <div className="flex items-center space-x-5 justify-center">
                         <MapPinIcon className="text-[#f7ab0a] h-7	w-7	animate-pulse" />
-                        <p className="text-2xl">Savarkundla, Saurashtra, Gujarat</p>
+                        <p className="text-2xl text-black">New Brunswick, NJ</p>
                     </div>
                 </div>
                 <form
@@ -46,28 +46,28 @@ const ContactMe: FC = () => {
                 >
                     <div className="flex space-x-2">
                         <input
-                            className="contactInput"
+                            className="contactInput bg-black placeholder-white"
                             type="text"
                             {...register("name")}
                             placeholder="Name"
                         />
                         <input
-                            className="contactInput"
+                            className="contactInput bg-black placeholder-white"
                             type="text"
                             {...register("email")}
                             placeholder="Email"
                         />
                     </div>
                     <input
-                        className="contactInput"
+                        className="contactInput bg-black placeholder-white"
                         type="text"
-                        {...register("subject")}
-                        placeholder="Subject"
+                        {...register("occupation")}
+                        placeholder="Occupation"
                     />
                     <textarea
-                        className="contactInput"
-                        {...register("message")}
-                        placeholder="Message"
+                        className="contactInput bg-black placeholder-white"
+                        {...register("feedback")}
+                        placeholder="Feedback"
                     />
                     <button
                         className="bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg"

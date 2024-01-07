@@ -79,9 +79,8 @@ const Header = () => {
                     network='email'
                     fgColor='black'
                     bgColor='transparent'
-                    onClick={() => window.location.href = "#contact"}
                 />
-                <p className="uppercase hidden md:inline-flex text-sm text-black" onClick = {() => window.location.href = "#contact"}>Get In Touch</p>
+                <p className="uppercase hidden md:inline-flex text-sm text-black">Get In Touch</p>
             </motion.div>
         </header>
     );

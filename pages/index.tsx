@@ -44,7 +44,7 @@ export default function Home() {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
+      {/*<Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <img
@@ -54,7 +54,7 @@ export default function Home() {
             />
           </div>
         </footer>
-      </Link>
+      </Link>*/}
 
     </div>
   );

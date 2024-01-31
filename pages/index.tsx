@@ -15,7 +15,7 @@ export default function Home() {
     <div className='bg-[#fff8e7] scale-100 m-auto text-white h-screen snap-y snap-mandatory overflow-scroll z-0 scrollbar scrollbar-track-gray-400/20 object-fit scrollbar-thumb-[#f7ab0a]/80'>
       {/*for above classname, default background was bg-[rgb(36,36,36)] for a strong shade of gray*/}
       <Head>
-        <title>SynthMind</title>
+        <title>SynthSense</title>
       </Head>
 
       <Header />

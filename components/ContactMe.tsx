@@ -64,7 +64,7 @@ const ContactMe: FC = () => {
               className="contactInput bg-black placeholder-white"
               type="text"
               {...register('firstName')}
-              placeholder="Name"
+              placeholder="First Name"
             />
             <input
               className="contactInput bg-black placeholder-white"

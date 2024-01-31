@@ -6,7 +6,7 @@ const Header = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     const profiles = [
-        { name: 'Pratham Pilli', url: 'https://www.linkedin.com/in/pratham-pilli-73281426a/' },
+        { name: 'Pratham Pilli', url: 'https://www.linkedin.com/in/prathampilli/' },
         { name: 'Anay Kothana', url: 'https://www.linkedin.com/in/anay-kothana/' },
         { name: 'Akash Puzhakkal', url: 'https://www.linkedin.com/in/akash-puzhakkal-a211b3222/' },
         { name: 'Arnav Mabrukar', url: 'https://www.linkedin.com/in/arnav-mabrukar-004700252/' },

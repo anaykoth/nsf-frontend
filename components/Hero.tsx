@@ -10,7 +10,7 @@ type Props = {};
 function Hero({ }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "< Hi, Welcome to SynthMind! />",
+            "< Hi, Welcome to SynthSense! />",
             "A startup innovating hospital-focused solutions.",
             "Crafting cutting-edge medical apps to deliver nurse efficiency and empower patients.",
         ],

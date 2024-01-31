@@ -27,7 +27,7 @@ const About = (props: Props) => {
                 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                src="/NJTransit.jpg"
+                src="/aboutPic.jpg"
                 alt="Author's Picture"
                 className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[350px] xl:h-[450px]'
             />
@@ -35,8 +35,8 @@ const About = (props: Props) => {
                 <h4 className='text-4xl font-semibold text-black'><span className='underline decoration-[#F7AB0A]/50'>Who</span> we are
                 </h4>
                 <p className='text-base sm:dots text-black'>
-                    Picture this: a hackathon hall alive with excitement, yet we couldn't shake off a touch of morning lethargy on a regular Saturday. Brought to you by Arnav Mubrakar, Akash Puzhakkal, Anay Kothana, and Pratham Pilli, we are SynthMind Innovators, and our journey kicked off fueled by ambition, creativity, and a bit of naivety. Inspired by NJ Transit's challenge at the annual HackRU, a pivotal decision loomed to transition from web to mobile app development, showcasing adaptability and quick decision-making.
-                    Our award-winning app, designed for bus services, seamlessly integrated user inputs, routes, and an AI-driven one-day trip planner. Building on this success, we ventured into the health-tech realm at HackHealth, developing MinDerva — a project that caught the attention of industry mentor Andrew Gordon. Under Andrew's guidance, our newly formed startup, SynthMind, secured a spot in the National Science Foundation's I-Corps program, receiving a $3,000 grant. Now poised to attend the Consumer Electronic Showcase in Las Vegas, SynthMind's journey is a testament to resilience, collaboration, and the boundless potential of youthful innovation in the startup and app development landscape.
+                    Picture this: a hackathon hall alive with excitement, yet we couldn't shake off a touch of morning lethargy on a regular Saturday. Brought to you by Arnav Mubrakar, Akash Puzhakkal, Anay Kothana, and Pratham Pilli, we are <b>SynthSense</b>, and our journey kicked off fueled by ambition, creativity, and a bit of naivety. Inspired by NJ Transit's challenge at the annual HackRU, a pivotal decision loomed to transition from web to mobile app development, showcasing adaptability and quick decision-making.
+                    Our award-winning app, designed for bus services, seamlessly integrated user inputs, routes, and an AI-driven one-day trip planner. Building on this success, we ventured into the health-tech realm at HackHealth, developing MinDerva — a project that caught the attention of industry mentor Andrew Gordon. Under Andrew's guidance, our newly formed startup, SynthSense, secured a spot in the National Science Foundation's I-Corps program, receiving a $3,000 grant. Now poised to attend the Consumer Electronic Showcase in Las Vegas, SynthSense's journey is a testament to resilience, collaboration, and the boundless potential of youthful innovation in the startup and app development landscape.
                 </p>
             </div>
         </motion.div>

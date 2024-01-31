@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 type ProjectProps = {
@@ -66,12 +66,21 @@ const Projects: React.FC = () => {
   ];
 
   const [activeSlide, setActiveSlide] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (event: React.UIEvent<HTMLDivElement, UIEvent>) => {
     const scrollPosition = event.currentTarget.scrollLeft;
     const slideWidth = window.innerWidth;
     const activeIndex = Math.round(scrollPosition / slideWidth);
     setActiveSlide(activeIndex);
+  };
+
+  const handleCircleClick = (index: number) => {
+    if (containerRef.current) {
+      const slideWidth = window.innerWidth;
+      containerRef.current.scrollLeft = index * slideWidth;
+      setActiveSlide(index);
+    }
   };
 
   return (
@@ -88,6 +97,7 @@ const Projects: React.FC = () => {
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
         onScroll={handleScroll}
+        ref={containerRef}
       >
         {projects.map((project, index) => (
           <Project key={index} title={project.title} description={project.description} image={project.image} />
@@ -98,7 +108,8 @@ const Projects: React.FC = () => {
         {projects.map((_, index) => (
           <div
             key={index}
-            className={`w-6 h-6 rounded-full bg-${index === activeSlide ? '[#f7ab0a]' : 'black'} border border-gray-300`}
+            className={`w-6 h-6 rounded-full bg-${index === activeSlide ? '[#f7ab0a]' : 'black'} border border-gray-300 cursor-pointer`}
+            onClick={() => handleCircleClick(index)}
           />
         ))}
       </div>
@@ -109,6 +120,7 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
+
 
 
 
